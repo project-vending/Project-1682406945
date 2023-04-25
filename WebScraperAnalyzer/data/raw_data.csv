@@ -1,0 +1,34 @@
+Sure, here's the python code to create `raw_data.csv` file inside the folder WebScraperAnalyzer/data:
+
+```
+import csv
+
+# Define the header for the CSV file
+headers = ['Name', 'Age', 'Gender', 'Address']
+
+# Define the data for the CSV file
+data = [
+    ['John Doe', 25, 'Male', '123 Main St'],
+    ['Jane Smith', 21, 'Female', '321 Park Ave'],
+    ['Bob Johnson', 30, 'Male', '456 1st Ave'],
+    ['Sarah Lee', 27, 'Female', '789 Elm St']
+]
+
+# Open the CSV file for writing
+with open('WebScraperAnalyzer/data/raw_data.csv', 'w', newline='') as csvfile:
+    # Create a CSV writer object
+    csvwriter = csv.writer(csvfile)
+    
+    # Write the header to the CSV file
+    csvwriter.writerow(headers)
+    
+    # Write the data to the CSV file
+    csvwriter.writerows(data)
+    
+# Close the CSV file
+csvfile.close()
+
+print('Data written to WebScraperAnalyzer/data/raw_data.csv successfully!')
+```
+
+This code will create the `raw_data.csv` file inside the `WebScraperAnalyzer/data` folder and write the header and data to the CSV file. You can customize the header and data with your own values.
